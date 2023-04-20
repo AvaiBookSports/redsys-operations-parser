@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+
+jobs:
+  PHPUnit:
+    name: PHPUnit (PHP ${{ matrix.php }})
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        php:
+          - 8.2
+          - 8.1
+          - 8.0
+          - 7.4
+    steps:
+      - uses: actions/checkout@v3
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: xdebug
+        env:
+          fail-fast: true # fail step if any extension can not be installed
+      - run: composer install
+      - run: vendor/bin/phpunit --coverage-text
+
+  quality-tools:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate --strict
+
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v3
+      with:
+        path: vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress
+
+    - name: Run PHPStan
+      run: vendor/bin/phpstan
+
+    - name: Run Psalm
+      run: vendor/bin/psalm
+
+    - name: Run php-cs-fixer
+      run: vendor/bin/php-cs-fixer fix --diff --dry-run
+
+    - name: Run Rector
+      run: vendor/bin/rector process --dry-run
