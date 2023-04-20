@@ -1,7 +1,7 @@
 {
     "name": "avaibooksports/redsys-operations-parser",
     "type": "library",
-    "license": "propietary",
+    "license": "MIT",
     "authors": [
         {
             "name": "Pablo Largo Mohedano",
