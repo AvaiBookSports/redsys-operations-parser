@@ -10,29 +10,29 @@ use AvaiBookSports\Component\RedsysOperationsParser\OperationInterface;
 final class Operation extends AbstractOperation
 {
     // Tipo de tarjeta
-    const TIPO_TARJETA_PROPIA_DEBITO = 'PD';
+    public const TIPO_TARJETA_PROPIA_DEBITO = 'PD';
 
-    const TIPO_TARJETA_PROPIA_CREDITO = 'PC';
+    public const TIPO_TARJETA_PROPIA_CREDITO = 'PC';
 
-    const TIPO_TARJETA_SERVIRED_DEBITO = 'SD';
+    public const TIPO_TARJETA_SERVIRED_DEBITO = 'SD';
 
-    const TIPO_TARJETA_SERVIRED_CREDITO = 'SC';
+    public const TIPO_TARJETA_SERVIRED_CREDITO = 'SC';
 
-    const TIPO_TARJETA_EURO6000_DEBITO = '6D';
+    public const TIPO_TARJETA_EURO6000_DEBITO = '6D';
 
-    const TIPO_TARJETA_EURO6000_CRÉDITO = '6C';
+    public const TIPO_TARJETA_EURO6000_CRÉDITO = '6C';
 
-    const TIPO_TARJETA_4B_DEBITO = '4D';
+    public const TIPO_TARJETA_4B_DEBITO = '4D';
 
-    const TIPO_TARJETA_4B_CRÉDITO = '4C';
+    public const TIPO_TARJETA_4B_CRÉDITO = '4C';
 
-    const TIPO_TARJETA_EUROPEAS_DEBITO = 'ED';
+    public const TIPO_TARJETA_EUROPEAS_DEBITO = 'ED';
 
-    const TIPO_TARJETA_EUROPEAS_CREDITO = 'EC';
+    public const TIPO_TARJETA_EUROPEAS_CREDITO = 'EC';
 
-    const TIPO_TARJETA_RESTO_DEBITO = 'RD';
+    public const TIPO_TARJETA_RESTO_DEBITO = 'RD';
 
-    const TIPO_TARJETA_RESTO_CRÉDITO = 'RC';
+    public const TIPO_TARJETA_RESTO_CRÉDITO = 'RC';
 
     // // Modalidades de pago
     // const MODALIDAD_PAGO_CREDITO = 'C';
@@ -49,13 +49,13 @@ final class Operation extends AbstractOperation
     // const OTRA = 'X';
 
     // Tipos de operación
-    const TIPO_OPERACION_ANULACION_VENTA = 25;
+    public const TIPO_OPERACION_ANULACION_VENTA = 25;
 
-    const TIPO_OPERACION_ANULACION_DEVOLUCION = 26;
+    public const TIPO_OPERACION_ANULACION_DEVOLUCION = 26;
 
-    const TIPO_OPERACION_REPRESENTACION_ANULACION_CHARGEBACK = 35;
+    public const TIPO_OPERACION_REPRESENTACION_ANULACION_CHARGEBACK = 35;
 
-    const TIPO_OPERACION_PREARBITRAJE_CARGADO = 36;
+    public const TIPO_OPERACION_PREARBITRAJE_CARGADO = 36;
 
     private ?string $datosOperacion = null;
 

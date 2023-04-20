@@ -17,17 +17,17 @@ use AvaiBookSports\Component\RedsysOperationsParser\Sabadell\Operation\Remmitanc
  */
 class OperationsParser extends AbstractOperationParser
 {
-    const LINE_LENGTH = 220;
+    public const LINE_LENGTH = 220;
 
-    const ENTRY_FILE_START = '10';
+    public const ENTRY_FILE_START = '10';
 
-    const ENTRY_FILE_END = '90';
+    public const ENTRY_FILE_END = '90';
 
-    const ENTRY_REMMITANCE_START = '00';
+    public const ENTRY_REMMITANCE_START = '00';
 
-    const ENTRY_REMMITANCE_END = '99';
+    public const ENTRY_REMMITANCE_END = '99';
 
-    const ENTRY_OPERATION = '01';
+    public const ENTRY_OPERATION = '01';
 
     /**
      * @throws InvalidLineLengthException if a line has an unexpected length

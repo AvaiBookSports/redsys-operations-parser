@@ -10,61 +10,61 @@ use AvaiBookSports\Component\RedsysOperationsParser\OperationInterface;
 final class Operation extends AbstractOperation
 {
     // Tipo de tarjeta
-    const TIPO_TARJETA_MAESTRO_PARTICULARES = 'AP';
+    public const TIPO_TARJETA_MAESTRO_PARTICULARES = 'AP';
 
-    const TIPO_TARJETA_VISAELECTRON_PARTICULARES = 'EP';
+    public const TIPO_TARJETA_VISAELECTRON_PARTICULARES = 'EP';
 
-    const TIPO_TARJETA_GASOLEO = 'GD';
+    public const TIPO_TARJETA_GASOLEO = 'GD';
 
-    const TIPO_TARJETA_B2B_SECTOR_TURISMO = 'MB';
+    public const TIPO_TARJETA_B2B_SECTOR_TURISMO = 'MB';
 
-    const TIPO_TARJETA_MASTERCARD_DESCONOCIDA = 'MD';
+    public const TIPO_TARJETA_MASTERCARD_DESCONOCIDA = 'MD';
 
-    const TIPO_TARJETA_MASTERCARD_EMPRESAS = 'ME';
+    public const TIPO_TARJETA_MASTERCARD_EMPRESAS = 'ME';
 
-    const TIPO_TARJETA_MASTERCARD_PARTICULARES = 'MP';
+    public const TIPO_TARJETA_MASTERCARD_PARTICULARES = 'MP';
 
-    const TIPO_TARJETA_VPAY = 'PP';
+    public const TIPO_TARJETA_VPAY = 'PP';
 
-    const TIPO_TARJETA_UNION_PAY = 'UP';
+    public const TIPO_TARJETA_UNION_PAY = 'UP';
 
-    const TIPO_TARJETA_VISA_DESCONOCIDA = 'VD';
+    public const TIPO_TARJETA_VISA_DESCONOCIDA = 'VD';
 
-    const TIPO_TARJETA_VISA_EMPRESAS = 'VE';
+    public const TIPO_TARJETA_VISA_EMPRESAS = 'VE';
 
-    const TIPO_TARJETA_VISA_PARTICULARES = 'VP';
+    public const TIPO_TARJETA_VISA_PARTICULARES = 'VP';
 
-    const TIPO_TARJETA_ALIPAY = 'AA';
+    public const TIPO_TARJETA_ALIPAY = 'AA';
 
-    const TIPO_TARJETA_BIZUM = 'BB';
+    public const TIPO_TARJETA_BIZUM = 'BB';
 
-    const MARCA_TARJETA_OTRAS = 'OD';
+    public const MARCA_TARJETA_OTRAS = 'OD';
 
     // Modalidades de pago
-    const MODALIDAD_PAGO_CREDITO = 'C';
+    public const MODALIDAD_PAGO_CREDITO = 'C';
 
-    const MODALIDAD_PAGO_DEBITO = 'D';
+    public const MODALIDAD_PAGO_DEBITO = 'D';
 
-    const MODALIDAD_PAGO_ALIPAY = 'A';
+    public const MODALIDAD_PAGO_ALIPAY = 'A';
 
-    const MODALIDAD_PAGO_BIZUM = 'B';
+    public const MODALIDAD_PAGO_BIZUM = 'B';
 
     // Entidades emisoras de la tarjeta
-    const BANCO_SABADELL = 'P';
+    public const BANCO_SABADELL = 'P';
 
-    const NACIONAL_SISTEMA_SERVIRED = 'N';
+    public const NACIONAL_SISTEMA_SERVIRED = 'N';
 
-    const NACIONAL_RESTO_SISTEMAS = 'R';
+    public const NACIONAL_RESTO_SISTEMAS = 'R';
 
-    const INTERNACIONAL_ZONA_EURO = 'E';
+    public const INTERNACIONAL_ZONA_EURO = 'E';
 
-    const INTERNACIONAL_RESTO = 'I';
+    public const INTERNACIONAL_RESTO = 'I';
 
-    const OTRA = 'X';
+    public const OTRA = 'X';
 
-    const CAPTURA_OPERACION_ONLINE = 'ON';
+    public const CAPTURA_OPERACION_ONLINE = 'ON';
 
-    const CAPTURA_OPERACION_OFFLINE = 'OFF';
+    public const CAPTURA_OPERACION_OFFLINE = 'OFF';
 
     /**
      * C – Crédito

@@ -62,7 +62,7 @@ final class OperationsParserTest extends TestCase
         $this->assertInstanceOf(Remmitance::class, $remmitances[0]);
 
         $this->assertEquals('0256', $remmitances[0]->getBancoContrato());
-        $this->assertEquals(12345678, $remmitances[0]->getComercio());
+        $this->assertEquals(12_345_678, $remmitances[0]->getComercio());
         $this->assertEquals('1234', $remmitances[0]->getContrapartidaContrato());
         $this->assertEquals('4321', $remmitances[0]->getContrapartidaCuenta());
         $this->assertEquals(null, $remmitances[0]->getContrato());

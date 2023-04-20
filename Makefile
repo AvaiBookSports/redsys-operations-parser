@@ -16,9 +16,21 @@ phpstan:
 psalm:
 	vendor/bin/psalm
 
-.PHONY: php-cs-fixer
-php-cs-fixer:
+.PHONY: fix
+fix:
+	vendor/bin/php-cs-fixer fix
+
+.PHONY: fix-dry
+fix-dry:
 	vendor/bin/php-cs-fixer fix --diff --dry-run
 
+.PHONY: rector
+rector:
+	vendor/bin/rector process
+
+.PHONY: rector-dry
+rector-dry:
+	vendor/bin/rector process --dry-run
+
 .PHONY: ci
-ci: phpstan psalm php-cs-fixer test
+ci: phpstan psalm test rector-dry fix-dry

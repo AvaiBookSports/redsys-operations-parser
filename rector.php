@@ -2,26 +2,22 @@
 
 declare(strict_types=1);
 
-use PhpCsFixer\Fixer\Import\NoUnusedImportsFixer;
 use Rector\Config\RectorConfig;
-use Rector\Core\Configuration\Option;
-use Rector\Php74\Rector\Property\TypedPropertyRector;
-use Rector\Set\ValueObject\SetList;
 use Rector\Core\ValueObject\PhpVersion;
+use Rector\Set\ValueObject\LevelSetList;
+use Rector\Set\ValueObject\SetList;
 
 return static function (RectorConfig $rectorConfig): void {
-    // get parameters
-    $parameters = $rectorConfig->parameters();
-    // get services (needed for register a single rule)
-    $services = $rectorConfig->services();
+    $rectorConfig->paths([
+        'src',
+        'tests',
+    ]);
 
     // Define what rule sets will be applied
-    // $containerConfigurator->import(SetList::DEAD_CODE);
+    $rectorConfig->import(SetList::DEAD_CODE);
     $rectorConfig->import(SetList::CODE_QUALITY);
-    $rectorConfig->import(SetList::PHP_74);
+    $rectorConfig->import(LevelSetList::UP_TO_PHP_82);
 
-    // register a single rule
-    $rectorConfig->ruleWithConfiguration(TypedPropertyRector::class, [
-        TypedPropertyRector::INLINE_PUBLIC => true,
-    ]);
+    // Always at the end to avoid overrides by rulesets
+    $rectorConfig->phpVersion(PhpVersion::PHP_74);
 };

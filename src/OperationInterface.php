@@ -7,22 +7,22 @@ interface OperationInterface
     /**
      * Venta si el signo de operación es positivo, anulación de venta si es negativo.
      */
-    const TIPO_OPERACION_VENTA = 5;
+    public const TIPO_OPERACION_VENTA = 5;
 
     /**
      * Devolución total o parcial si el signo de operación es negativo, anulación de devolución total o parcial si es positivo.
      */
-    const TIPO_OPERACION_DEVOLUCION = 6;
+    public const TIPO_OPERACION_DEVOLUCION = 6;
 
     /**
      * Retrocesión de devolución (+) ordenado por el titular de la tarjeta.
      */
-    const TIPO_OPERACION_RETROCESION_DEVOLUCION = 15;
+    public const TIPO_OPERACION_RETROCESION_DEVOLUCION = 15;
 
     /**
      * Chargeback o retrocesión de venta (-) ordenado por el titular de la tarjeta.
      */
-    const TIPO_OPERACION_CHARGEBACK = 16;
+    public const TIPO_OPERACION_CHARGEBACK = 16;
 
     public function getFechaRemesa(): ?\DateTimeInterface;
 

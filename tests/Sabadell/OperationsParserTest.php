@@ -39,8 +39,8 @@ final class OperationsParserTest extends TestCase
 
         $this->assertInstanceOf(Remmitance::class, $remmitances[0]);
 
-        $this->assertEquals(337211536, $remmitances[0]->getComercio());
-        $this->assertEquals(3670505743, $remmitances[0]->getContrato());
+        $this->assertEquals(337_211_536, $remmitances[0]->getComercio());
+        $this->assertEquals(3_670_505_743, $remmitances[0]->getContrato());
         $this->assertEquals('01234567890123456789', $remmitances[0]->getCuenta());
         $this->assertEquals(new \DateTime('2020-04-07 00:00:00'), $remmitances[0]->getFechaFinal());
         $this->assertEquals(new \DateTime('2020-04-07 00:00:00'), $remmitances[0]->getFechaInicio());
