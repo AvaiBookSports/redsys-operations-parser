@@ -1,5 +1,6 @@
 {
     "name": "avaibooksports/redsys-operations-parser",
+    "description": "Redsys operations parser",
     "type": "library",
     "license": "MIT",
     "authors": [
