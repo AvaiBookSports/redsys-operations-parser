@@ -99,7 +99,7 @@ final class OperationsParserTest extends TestCase
         $this->assertEquals('012345******6789', $operations[0]->getTarjeta());
         $this->assertEquals(0.4, $operations[0]->getTasaDescuento());
         $this->assertEquals(Operation::TIPO_OPERACION_VENTA, $operations[0]->getTipoOperacion());
-        $this->assertEquals(OPERATION::TIPO_TARJETA_SERVIRED_DEBITO, $operations[0]->getTipoTarjeta());
+        $this->assertEquals(Operation::TIPO_TARJETA_SERVIRED_DEBITO, $operations[0]->getTipoTarjeta());
     }
 
     public function testGetLineCount(): void
